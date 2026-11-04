@@ -46,12 +46,13 @@ the agent's last decision is at most one scan old, 89% of them):
 | V-JEPA + the context of its replies | +0.0644 | 492 |
 | **V-JEPA + the agent's state + the context of its replies** | **+0.0672** | **667** |
 | Control: the same, with the reply context shifted in time | +0.0617 | |
+| **After RL: V-JEPA + the agent's state + the context of its replies** | **+0.0688** | **721** |
 
 Shifted in time, the reply context adds nothing (the gain falls back to what the state alone adds), so it is tied to the
 moment. The gain is largest in the salience / ventral attention (+0.014), somatomotor (+0.013) and dorsal attention (+0.011)
-networks, then control, visual and default mode; it is near zero in limbic regions. These are the agent after SFT;
-after RL its reply context predicts more (V-JEPA + reply context, layer 39: +0.0662 -> +0.0683, 584 -> 620 regions,
-RL checkpoint after 10 iterations).
+networks, then control, visual and default mode; it is near zero in limbic regions. The rows above are the agent after SFT; after RL (checkpoint after 10 iterations) the same encoder gains more,
++0.0688, better than V-JEPA in 721 of 1,000 regions: playing more like the person also makes its mind line up
+better with their brain.
 
 **It plays like the person** (RL toward sub-03; matched moments = the same game situations; a classifier trained to
 tell the agent's moves from the person's scores 0.5 when it cannot tell them apart):
