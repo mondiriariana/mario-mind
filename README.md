@@ -35,28 +35,39 @@ scanner with every button press recorded.
 
 ## Results
 
-**The agent's mind adds to what is on screen** (sub-03, held-out sessions, gain in mean correlation over a nuisance
-model of buttons, level, time, luminance, motion and sound; 1,000 regions):
+**The agent's mind adds to what is on screen** (sub-03, 19 held-out runs from 6 held-out sessions; gain in mean
+correlation over a nuisance model of buttons, level, time, luminance, motion and sound; 1,000 regions; scans where
+the agent's last decision is at most one scan old, 89% of them):
 
-| Encoder | Gain |
-|---|---|
-| V-JEPA 2.1 alone (the strongest single feature) | +0.0686 |
-| **V-JEPA + the agent's state + the context of its replies** | **+0.0760** |
-| Control: the reply context shifted in time | +0.0679 |
-
-Adding the context of what the agent has written beats V-JEPA alone in 482 of 1,000 regions (somatomotor, salience,
-control, attention and default-mode networks). Shifted in time it adds nothing, so the gain is tied to the moment.
-
-**It plays like the person and reasons on every move** (SFT recipe, tested on one person, sub-01; 30 games each
-against 9,432 held-out moves of that person; action KL = distance between the agent's and the person's button mix):
-
-| Agent | Action KL vs the person | Reasons on every move |
+| Encoder | Gain | Regions better than V-JEPA |
 |---|---|---|
-| Glimmer out of the box | 3.31 | 95% |
-| **Glimmer after SFT (own reasoning, then the person's button)** | **0.09** | **100%** |
+| V-JEPA 2.1 alone (the strongest single feature) | +0.0581 | |
+| V-JEPA + the agent's prompt state | +0.0617 | 350 |
+| V-JEPA + the context of its replies | +0.0644 | 492 |
+| **V-JEPA + the agent's state + the context of its replies** | **+0.0672** | **667** |
 
-Limits: brain results on one person and one held-out split so far; RL and the final agent are single runs. Every
-metric is explained in [docs/METRICS.md](docs/METRICS.md).
+The gain is largest in the salience / ventral attention (+0.014), somatomotor (+0.013) and dorsal attention (+0.011)
+networks, then control, visual and default mode; it is near zero in limbic regions. These are the agent after SFT;
+after RL its reply context predicts more (V-JEPA + reply context, layer 39: +0.0662 -> +0.0683, 584 -> 620 regions,
+RL checkpoint after 10 iterations).
+
+**It plays like the person** (RL toward sub-03; matched moments = the same game situations; a classifier trained to
+tell the agent's moves from the person's scores 0.5 when it cannot tell them apart):
+
+| Agent | Classifier, agent vs sub-03 | Action KL vs sub-03 |
+|---|---|---|
+| After SFT (RL iteration 1) | 0.84 | 0.50 |
+| **After RL (iterations 20-31)** | **0.49-0.56** | **~0.01** |
+
+It reasons before every move (100% of replies) and stays close to the SFT model (KL ~0.01 per token).
+
+**It has a sense of danger that lines up with the brain.** A linear readout of the risk of dying within 3 s from the
+agent's state (layer 26) reaches r 0.60 on held-out scans (V-JEPA 0.70; buttons, level and low-level features 0.48); its readout agrees with
+the brain's own danger readout over 88 danger-responsive regions (r 0.34, p 0.005) and predicts their activity
+(r 0.098, vs 0.084 for the true danger signal).
+
+Limits: one person and one held-out split for the brain; RL and the final agent are single runs. Every metric is
+explained in [docs/METRICS.md](docs/METRICS.md).
 
 ## Meta models used
 
