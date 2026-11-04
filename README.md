@@ -67,7 +67,9 @@ It reasons before every move (100% of replies) and stays close to the SFT model 
 **It has a sense of danger that lines up with the brain.** A linear readout of the risk of dying within 3 s from the
 agent's state (layer 26) reaches r 0.60 on held-out scans (V-JEPA 0.70; buttons, level and low-level features 0.48); its readout agrees with
 the brain's own danger readout over 88 danger-responsive regions (r 0.34, p 0.005) and predicts their activity
-(r 0.098, vs 0.084 for the true danger signal).
+(r 0.098, vs 0.084 for the true danger signal). Pushing the RL agent's state along this danger direction while it plays changes its play,
+not its words: at the strongest push it gets further through short danger scenarios (+13.8 pixels, 95% CI 2.0 to
+25.5, 30 games per strength); weaker or opposite pushes show no reliable change.
 
 Limits: one person and one held-out split for the brain; RL and the final agent are single runs. Every metric is
 explained in [docs/METRICS.md](docs/METRICS.md).
