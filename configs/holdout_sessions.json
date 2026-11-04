@@ -1,0 +1,89 @@
+{
+ "description": "Sessions held out for the fMRI analysis. Never used for reasoning traces, agent training or validation. Read by every script that splits data.",
+ "rule": "Per subject, sessions sorted by name; hold out every 5th (positions 5, 10, 15, ...). Then, for every level missing from a subject's held-out sessions, add the nearest session (by position) to a held-out one that contains that level; ties broken by bringing the subject's held-out play share closest to 20%.",
+ "adjustments": {
+  "sub-03": "w1l2 missing from positions 5,10,15,20,25; added ses-025 (position 24, next to held-out ses-026; tied with ses-010, ses-015, ses-020 at distance 1; ses-025 brings the share closest to 20%)."
+ },
+ "holdout": {
+  "sub-01": [
+   "ses-005",
+   "ses-010",
+   "ses-015",
+   "ses-020"
+  ],
+  "sub-02": [
+   "ses-005",
+   "ses-010",
+   "ses-015",
+   "ses-020"
+  ],
+  "sub-03": [
+   "ses-005",
+   "ses-011",
+   "ses-016",
+   "ses-021",
+   "ses-025",
+   "ses-026"
+  ],
+  "sub-05": [
+   "ses-005",
+   "ses-010",
+   "ses-015",
+   "ses-020"
+  ],
+  "sub-06": [
+   "ses-005",
+   "ses-010",
+   "ses-015",
+   "ses-020",
+   "ses-025"
+  ]
+ },
+ "stats": {
+  "sub-01": {
+   "sessions_total": 21,
+   "sessions_held": 4,
+   "plays_total": 797,
+   "plays_held": 164,
+   "play_share": 0.206,
+   "levels_held": 22,
+   "levels_total": 22
+  },
+  "sub-02": {
+   "sessions_total": 23,
+   "sessions_held": 4,
+   "plays_total": 714,
+   "plays_held": 135,
+   "play_share": 0.189,
+   "levels_held": 22,
+   "levels_total": 22
+  },
+  "sub-03": {
+   "sessions_total": 29,
+   "sessions_held": 6,
+   "plays_total": 627,
+   "plays_held": 128,
+   "play_share": 0.204,
+   "levels_held": 22,
+   "levels_total": 22
+  },
+  "sub-05": {
+   "sessions_total": 22,
+   "sessions_held": 4,
+   "plays_total": 634,
+   "plays_held": 124,
+   "play_share": 0.196,
+   "levels_held": 22,
+   "levels_total": 22
+  },
+  "sub-06": {
+   "sessions_total": 25,
+   "sessions_held": 5,
+   "plays_total": 602,
+   "plays_held": 112,
+   "play_share": 0.186,
+   "levels_held": 22,
+   "levels_total": 22
+  }
+ }
+}

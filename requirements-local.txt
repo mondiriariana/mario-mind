@@ -1,0 +1,13 @@
+# Laptop environment: editing, analysis, figures, loading checkpoints (CPU only).
+# Training and evaluation run as Slurm jobs on a GPU cluster (slurm/, paths in slurm/paths.example.sh).
+numpy
+scipy
+pandas
+matplotlib
+scikit-learn
+pyyaml
+tqdm
+einops
+av
+torch
+transformers==4.57.1

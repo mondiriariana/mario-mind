@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <!-- "Why VLA-JEPA?", the one slide: context, the screen, V-JEPA (sees ahead), Glimmer (understands),
+       VLA-JEPA = both, and how its reasoning is kept. Groups #context #frame #vjepa #glimmer #vlajepa #reasoning can be
+       revealed in that order. Measured values only; dashed boxes / [Nov 3] are placeholders for the long run's
+       milestone. V-JEPA alone: same world model, trained with the long run's schedule (exp5b_none_wsd). -->
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5B6573"/>
+    </marker>
+    <filter id="sh" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#1C2430" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="#F7F8FA"/>
+  <text x="80" y="72" font-size="40" font-weight="700" fill="#1C2430">Why VLA-JEPA?</text>
+  <g id="context">
+    <text x="80" y="116" font-size="23" fill="#2E3846">To stand in for a person, an agent has to <tspan font-weight="700">see what is coming</tspan> and <tspan font-weight="700">understand what it means</tspan>.</text>
+    <text x="80" y="148" font-size="23" fill="#2E3846">Each model we had does only one.</text>
+  </g>
+
+  <!-- the screen -->
+  <g id="frame">
+    <rect x="80" y="190" width="210" height="300" rx="16" fill="#FFFFFF" stroke="#C5CBD3" stroke-width="2" filter="url(#sh)"/>
+    <rect x="98" y="208" width="174" height="190" rx="6" fill="#5C94FC"/>
+    <rect x="98" y="364" width="174" height="34" fill="#C84C0C"/>
+    <rect x="98" y="364" width="174" height="5" fill="#E09050"/>
+    <rect x="128" y="333" width="15" height="31" rx="3" fill="#B53120"/>
+    <rect x="126" y="325" width="19" height="10" rx="3" fill="#B53120"/>
+    <ellipse cx="222" cy="356" rx="13" ry="8" fill="#8B4513"/>
+    <rect x="196" y="270" width="28" height="28" fill="#E09050" stroke="#8B4513" stroke-width="2"/>
+    <text x="210" y="291" font-size="19" font-weight="700" text-anchor="middle" fill="#8B4513">?</text>
+    <text x="185" y="432" font-size="19" font-weight="600" text-anchor="middle" fill="#1C2430">One screenshot</text>
+    <text x="185" y="458" font-size="16" text-anchor="middle" fill="#5B6573">what happens next?</text>
+    <line x1="290" y1="340" x2="322" y2="340" stroke="#5B6573" stroke-width="3" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- V-JEPA -->
+  <g id="vjepa">
+    <rect x="330" y="190" width="570" height="300" rx="16" fill="#FFFFFF" stroke="#1C7ED6" stroke-width="3" filter="url(#sh)"/>
+    <rect x="330" y="190" width="570" height="10" rx="5" fill="#1C7ED6"/>
+    <text x="355" y="238" font-size="26" font-weight="700" fill="#1C2430">V-JEPA 2.1 <tspan font-size="17" font-weight="400" fill="#5B6573">video model (Meta FAIR)</tspan></text>
+    <g font-size="18" fill="#2E3846">
+      <circle cx="368" cy="272" r="13" fill="#D3F9D8"/><text x="368" y="278" font-size="17" font-weight="700" text-anchor="middle" fill="#2B8A3E">✓</text>
+      <text x="390" y="278">sees what is coming</text>
+      <circle cx="610" cy="272" r="13" fill="#FFE3E3"/><text x="610" y="278" font-size="17" font-weight="700" text-anchor="middle" fill="#C92A2A">✗</text>
+      <text x="632" y="278">understands or explains</text>
+    </g>
+    <text x="355" y="316" font-size="15" fill="#5B6573">how much of the change it predicts (R², held-out sessions)</text>
+    <g font-size="16" fill="#1C2430">
+      <text x="355" y="350">+0.5 s</text><rect x="420" y="335" width="320" height="20" rx="4" fill="#E7F5FF"/>
+      <rect x="420" y="335" width="287" height="20" rx="4" fill="#1C7ED6"/><text x="717" y="350" font-weight="700" fill="#1864AB">0.40</text>
+      <text x="355" y="384">+1 s</text><rect x="420" y="369" width="320" height="20" rx="4" fill="#E7F5FF"/>
+      <rect x="420" y="369" width="315" height="20" rx="4" fill="#1C7ED6"/><text x="745" y="384" font-weight="700" fill="#1864AB">0.44</text>
+      <text x="355" y="418">+2 s</text><rect x="420" y="403" width="320" height="20" rx="4" fill="#E7F5FF"/>
+      <rect x="420" y="403" width="297" height="20" rx="4" fill="#1C7ED6"/><text x="727" y="418" font-weight="700" fill="#1864AB">0.42</text>
+    </g>
+    <text x="355" y="464" font-size="16" fill="#5B6573">Also our best brain predictor (+0.054), but a black box</text>
+  </g>
+
+  <!-- Glimmer -->
+  <g id="glimmer">
+    <rect x="940" y="190" width="580" height="300" rx="16" fill="#FFFFFF" stroke="#4C6EF5" stroke-width="3" filter="url(#sh)"/>
+    <rect x="940" y="190" width="580" height="10" rx="5" fill="#4C6EF5"/>
+    <text x="965" y="238" font-size="26" font-weight="700" fill="#1C2430">Glimmer 30B <tspan font-size="17" font-weight="400" fill="#5B6573">vision-language model (Meta)</tspan></text>
+    <g font-size="18" fill="#2E3846">
+      <circle cx="978" cy="272" r="13" fill="#FFE3E3"/><text x="978" y="278" font-size="17" font-weight="700" text-anchor="middle" fill="#C92A2A">✗</text>
+      <text x="1000" y="278">sees what is coming</text>
+      <circle cx="1220" cy="272" r="13" fill="#D3F9D8"/><text x="1220" y="278" font-size="17" font-weight="700" text-anchor="middle" fill="#2B8A3E">✓</text>
+      <text x="1242" y="278">understands and explains</text>
+    </g>
+    <rect x="965" y="306" width="530" height="96" rx="10" fill="#EDF2FF"/>
+    <text x="983" y="340" font-size="18" font-style="italic" fill="#364FC7">"A Goomba is ahead and a block is above,</text>
+    <text x="983" y="368" font-size="18" font-style="italic" fill="#364FC7">so jump now: right + A"</text>
+    <text x="965" y="440" font-size="16" fill="#5B6573">Reads the same screen and reasons in words,</text>
+    <text x="965" y="464" font-size="16" fill="#5B6573">but has no model of what happens next</text>
+  </g>
+
+  <!-- converge -->
+  <line x1="615" y1="490" x2="615" y2="532" stroke="#5B6573" stroke-width="3" marker-end="url(#ar)"/>
+  <line x1="1230" y1="490" x2="1230" y2="532" stroke="#5B6573" stroke-width="3" marker-end="url(#ar)"/>
+  <text x="922" y="526" font-size="34" font-weight="300" text-anchor="middle" fill="#5B6573">+</text>
+
+  <!-- VLA-JEPA = both -->
+  <g id="vlajepa">
+    <rect x="80" y="540" width="1440" height="310" rx="18" fill="#FFFFFF" stroke="#7048E8" stroke-width="4" filter="url(#sh)"/>
+    <rect x="80" y="540" width="1440" height="12" rx="6" fill="#7048E8"/>
+    <text x="110" y="592" font-size="28" font-weight="700" fill="#1C2430">VLA-JEPA <tspan font-size="18" font-weight="400" fill="#5B6573">Glimmer trained to predict V-JEPA's future: 8 latent tokens carry what it understands into a world model</tspan></text>
+    <g font-size="18" fill="#2E3846">
+      <circle cx="123" cy="628" r="13" fill="#D3F9D8"/><text x="123" y="634" font-size="17" font-weight="700" text-anchor="middle" fill="#2B8A3E">✓</text>
+      <text x="145" y="634">sees what is coming</text>
+      <circle cx="365" cy="628" r="13" fill="#D3F9D8"/><text x="365" y="634" font-size="17" font-weight="700" text-anchor="middle" fill="#2B8A3E">✓</text>
+      <text x="387" y="634">understands and explains</text>
+    </g>
+    <g font-size="15" fill="#5B6573">
+      <rect x="620" y="618" width="14" height="14" rx="3" fill="#1C7ED6"/><text x="640" y="630">V-JEPA alone</text>
+      <rect x="742" y="618" width="14" height="14" rx="3" fill="none" stroke="#7048E8" stroke-width="2" stroke-dasharray="4 3"/><text x="762" y="630">VLA-JEPA [Nov 3]</text>
+    </g>
+    <!-- grouped bars: scale 0.45 = 150 px from the baseline y=815 -->
+    <g font-size="15" fill="#5B6573" text-anchor="middle">
+      <line x1="110" y1="815" x2="860" y2="815" stroke="#C5CBD3" stroke-width="1.5"/>
+      <rect x="200" y="681" width="60" height="134" rx="4" fill="#1C7ED6"/>
+      <rect x="266" y="665" width="60" height="150" rx="4" fill="none" stroke="#7048E8" stroke-width="2" stroke-dasharray="6 5"/>
+      <text x="296" y="748" font-size="22" font-weight="700" fill="#7048E8">?</text>
+      <text x="263" y="838">+0.5 s</text>
+      <rect x="440" y="667" width="60" height="148" rx="4" fill="#1C7ED6"/>
+      <rect x="506" y="665" width="60" height="150" rx="4" fill="none" stroke="#7048E8" stroke-width="2" stroke-dasharray="6 5"/>
+      <text x="536" y="748" font-size="22" font-weight="700" fill="#7048E8">?</text>
+      <text x="503" y="838">+1 s</text>
+      <rect x="680" y="676" width="60" height="139" rx="4" fill="#1C7ED6"/>
+      <rect x="746" y="665" width="60" height="150" rx="4" fill="none" stroke="#7048E8" stroke-width="2" stroke-dasharray="6 5"/>
+      <text x="776" y="748" font-size="22" font-weight="700" fill="#7048E8">?</text>
+      <text x="743" y="838">+2 s</text>
+    </g>
+  </g>
+
+  <!-- keeping the reasoning -->
+  <g id="reasoning">
+    <rect x="915" y="612" width="575" height="214" rx="14" fill="#F8F0FC" stroke="#AE3EC9" stroke-width="2"/>
+    <text x="939" y="648" font-size="22" font-weight="700" fill="#862E9C">Keeping its reasoning</text>
+    <text x="939" y="682" font-size="17" fill="#2E3846">Prediction training alone erased the language:</text>
+    <text x="939" y="708" font-size="17" fill="#2E3846">loss on human play <tspan font-weight="700">3.1</tspan> (Glimmer) → <tspan font-weight="700" fill="#C92A2A">13.3</tspan> after it</text>
+    <text x="939" y="742" font-size="17" fill="#2E3846">Fix: a language loss on its own reasoning,</text>
+    <text x="939" y="766" font-size="17" fill="#2E3846">balanced 1 : 1 with the prediction gradient</text>
+    <rect x="939" y="782" width="527" height="32" rx="8" fill="#FFFFFF" stroke="#AE3EC9" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <text x="1202" y="804" font-size="16" text-anchor="middle" fill="#862E9C">language loss [Nov 3] (Glimmer 1.16; lower = better)</text>
+  </g>
+
+  <text x="80" y="884" font-size="14" fill="#7A8491">R² of the change: 0 = no better than "nothing changes", 1 = perfect. V-JEPA alone trained with the same schedule as ours. Bars to scale (0 to 0.45).</text>
+</svg>

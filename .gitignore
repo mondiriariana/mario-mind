@@ -1,0 +1,37 @@
+__pycache__/
+*.pyc
+*.nes
+*.state
+/data/
+/runs/
+/features/
+*.pt
+*.npz
+!results/**/*.npz
+.DS_Store
+logs/
+
+!results/checkpoints/**/*.pt
+.venv/
+.vscode/
+
+# Kept locally, not published: footage, screenshots and emulator replays of the game
+results/**/*.mp4
+results/**/*.bk2
+results/figures/gameplay_*.png
+slurm/paths.local.sh
+
+# Audit exports of the reasoning traces (hold game screenshots)
+/reasoning_audit/
+
+# Meta Model API key and settings for reasoning traces (never commit)
+reasoning_trace/muse.env
+
+# macOS resource-fork files (._*)
+._*
+
+# Executed notebooks with game screenshots (kept local)
+notebooks/*.local.ipynb
+
+# Colab bundle (holds the game ROM): never commit
+experiments/glimmer_imitation/colab/*.tgz

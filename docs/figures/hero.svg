@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="30 150 1540 360" width="1540" height="360" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <!-- Mario Mind hero (README). Drawn shapes only: no game screenshots. -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5B6573"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#1C2430" flood-opacity="0.10"/>
+    </filter>
+    <radialGradient id="hot1"><stop offset="0" stop-color="#F03E3E" stop-opacity="0.95"/><stop offset="1" stop-color="#F03E3E" stop-opacity="0"/></radialGradient>
+    <radialGradient id="hot2"><stop offset="0" stop-color="#F76707" stop-opacity="0.9"/><stop offset="1" stop-color="#F76707" stop-opacity="0"/></radialGradient>
+    <radialGradient id="hot3"><stop offset="0" stop-color="#FAB005" stop-opacity="0.9"/><stop offset="1" stop-color="#FAB005" stop-opacity="0"/></radialGradient>
+    <radialGradient id="cool"><stop offset="0" stop-color="#4C6EF5" stop-opacity="0.7"/><stop offset="1" stop-color="#4C6EF5" stop-opacity="0"/></radialGradient>
+    <clipPath id="brainclip"><path d="M20,112 C6,72 32,26 82,15 C122,1 182,6 216,30 C250,52 262,92 250,122 C244,142 224,152 204,149 C190,161 160,166 132,158 C112,176 76,179 56,162 C36,152 26,138 20,112 Z"/></clipPath>
+  </defs>
+  <rect x="0" y="0" width="1600" height="640" fill="#F7F8FA"/>
+
+
+  <!-- 1: the game -->
+  <g transform="translate(60,180)">
+    <rect x="0" y="0" width="400" height="300" rx="20" fill="#FFFFFF" stroke="#C5CBD3" stroke-width="2" filter="url(#shadow)"/>
+    <g transform="translate(56,30) scale(1.2)">
+      <rect x="0" y="0" width="240" height="168" rx="12" fill="#5c94fc"/>
+      <rect x="0" y="124" width="240" height="44" fill="#c84c0c"/>
+      <rect x="0" y="124" width="240" height="9" fill="#e09050"/>
+      <rect x="44" y="66" width="34" height="10" rx="4" fill="#d03a2a"/>
+      <rect x="40" y="72" width="16" height="5" rx="2" fill="#d03a2a"/>
+      <rect x="47" y="76" width="28" height="16" rx="3" fill="#f2c9a0"/>
+      <circle cx="68" cy="83" r="2.5" fill="#1f232b"/>
+      <rect x="45" y="92" width="32" height="14" rx="3" fill="#d03a2a"/>
+      <rect x="47" y="104" width="28" height="12" rx="2" fill="#2f5fd0"/>
+      <rect x="47" y="116" width="11" height="8" fill="#2f5fd0"/>
+      <rect x="64" y="116" width="11" height="8" fill="#2f5fd0"/>
+      <ellipse cx="150" cy="114" rx="24" ry="13" fill="#8b4a1c"/>
+      <rect x="128" y="22" width="38" height="38" rx="3" fill="#f0a030" stroke="#8b4a1c" stroke-width="3"/>
+      <text x="147" y="52" font-size="28" font-weight="700" text-anchor="middle" fill="#8b4a1c">?</text>
+      <rect x="200" y="84" width="34" height="40" rx="3" fill="#2a9d3a"/>
+      <rect x="194" y="76" width="46" height="14" rx="3" fill="#2a9d3a"/>
+    </g>
+    <text x="200" y="278" font-size="20" font-weight="600" text-anchor="middle" fill="#1C2430">the screen a person saw in the scanner</text>
+  </g>
+
+  <line x1="478" y1="330" x2="548" y2="330" stroke="#5B6573" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- 2: the agent -->
+  <g transform="translate(565,180)">
+    <rect x="0" y="0" width="470" height="300" rx="20" fill="#FFFFFF" stroke="#7048E8" stroke-width="3" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="470" height="10" rx="5" fill="#7048E8"/>
+    <text x="30" y="56" font-size="25" font-weight="700" fill="#1C2430">Muse Glimmer 30B</text>
+    <text x="30" y="84" font-size="18" fill="#5B6573">sees ahead (VLA-JEPA), plays like the person</text>
+    <rect x="30" y="104" width="410" height="112" rx="12" fill="#F3F0FF"/>
+    <text x="48" y="134" font-size="16" font-weight="700" fill="#7048E8">&lt;reasoning&gt;</text>
+    <text x="48" y="162" font-size="19" font-style="italic" fill="#2E3846">A Goomba is walking toward Mario.</text>
+    <text x="48" y="188" font-size="19" font-style="italic" fill="#2E3846">Jump now to clear it and hit the block.</text>
+    <text x="30" y="250" font-size="17" font-weight="600" fill="#5B6573">its internal state</text>
+    <g transform="translate(180,232)">
+      <rect x="0" y="0" width="14" height="26" rx="3" fill="#7048E8" opacity="0.35"/>
+      <rect x="18" y="8" width="14" height="18" rx="3" fill="#7048E8" opacity="0.8"/>
+      <rect x="36" y="2" width="14" height="24" rx="3" fill="#7048E8" opacity="0.55"/>
+      <rect x="54" y="12" width="14" height="14" rx="3" fill="#7048E8" opacity="0.9"/>
+      <rect x="72" y="4" width="14" height="22" rx="3" fill="#7048E8" opacity="0.45"/>
+      <rect x="90" y="10" width="14" height="16" rx="3" fill="#7048E8" opacity="0.7"/>
+      <rect x="108" y="0" width="14" height="26" rx="3" fill="#7048E8" opacity="0.6"/>
+      <rect x="126" y="14" width="14" height="12" rx="3" fill="#7048E8" opacity="0.85"/>
+      <text x="152" y="20" font-size="17" fill="#5B6573">…</text>
+    </g>
+    <g font-size="17" font-weight="600">
+      <rect x="330" y="232" width="110" height="30" rx="15" fill="#E6FCF5"/>
+      <text x="385" y="253" text-anchor="middle" fill="#0CA678">right + A</text>
+    </g>
+  </g>
+
+  <line x1="1053" y1="330" x2="1185" y2="330" stroke="#5B6573" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="1119" y="312" font-size="16" fill="#5B6573" text-anchor="middle">encoder</text>
+
+  <!-- 3: the brain (side view: frontal lobe left) -->
+  <g>
+    <rect x="1200" y="180" width="340" height="300" rx="20" fill="#FFFFFF" stroke="#E64980" stroke-width="3" filter="url(#shadow)"/>
+    <rect x="1200" y="180" width="340" height="10" rx="5" fill="#E64980"/>
+    <g transform="translate(1240,218)">
+      <path d="M168,150 C170,170 172,185 178,200 L196,200 C190,184 188,166 192,148 Z" fill="#F8C9D8" stroke="#C2255C" stroke-width="2.5"/>
+      <ellipse cx="208" cy="160" rx="34" ry="21" fill="#F8C9D8" stroke="#C2255C" stroke-width="2.5"/>
+      <g fill="none" stroke="#C2255C" stroke-width="1.5" opacity="0.5">
+        <path d="M182,156 C200,152 220,154 236,162"/><path d="M184,166 C202,163 222,165 236,171"/>
+      </g>
+      <path d="M20,112 C6,72 32,26 82,15 C122,1 182,6 216,30 C250,52 262,92 250,122 C244,142 224,152 204,149 C190,161 160,166 132,158 C112,176 76,179 56,162 C36,152 26,138 20,112 Z" fill="#FCE4EC" stroke="#C2255C" stroke-width="3"/>
+      <g clip-path="url(#brainclip)">
+        <circle cx="70" cy="60" r="48" fill="url(#hot1)"/>
+        <circle cx="160" cy="40" r="42" fill="url(#hot2)"/>
+        <circle cx="225" cy="100" r="40" fill="url(#hot3)"/>
+        <circle cx="110" cy="140" r="42" fill="url(#cool)"/>
+        <circle cx="38" cy="112" r="28" fill="url(#hot2)"/>
+      </g>
+      <g fill="none" stroke="#C2255C" stroke-width="2" stroke-linecap="round" opacity="0.6">
+        <path d="M66,124 C100,104 146,110 190,100"/>
+        <path d="M140,12 C128,46 150,74 134,104"/>
+        <path d="M104,20 C92,46 110,70 96,98"/>
+        <path d="M184,26 C172,56 196,80 184,106"/>
+        <path d="M40,70 C58,64 74,76 90,68"/>
+        <path d="M216,60 C228,78 222,96 236,110"/>
+      </g>
+    </g>
+    <text x="1370" y="458" font-size="20" font-weight="600" text-anchor="middle" fill="#1C2430">predicted brain activity</text>
+  </g>
+
+</svg>
