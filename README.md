@@ -116,9 +116,7 @@ sbatch --export=ALL,RL_MODEL=<VLA-JEPA Glimmer>,RL_INIT=<SFT lora.pt>,RL_FORCE=1
 
 Everything Glimmer (VLA-JEPA, SFT, RL, the play loop), the calibration, the brain encoders with the agent and its
 reply context, the generator, the demo and the danger analysis were built during the hackathon (Oct 26 - Nov 4).
-Reused from before: the emulator wrapper and data index (`mjg/emulator.py`, `mjg/data.py`, `mjg/objects.py`, Oct
-21-24) and ridge / timing helpers from the author's earlier fMRI work (`mjg/encoding.py`).
-
+Reused from before: the emulator wrapper and data index (`mjg/emulator.py`, `mjg/data.py`, `mjg/objects.py`) 
 ## Credits
 
 CNeuroMod (Courtois NeuroMod project) for the *mario* dataset and game integration; VLA-JEPA (arXiv 2602.10098) for
